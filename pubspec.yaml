@@ -8,8 +8,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  filesize: ^2.0.1
   flutter:
     sdk: flutter
+  intl: ^0.18.0
+  mime: ^1.0.4
 
 dev_dependencies:
   flutter_test:
