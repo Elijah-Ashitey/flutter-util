@@ -1,23 +1,38 @@
 name: sharedkits
-description: A new Flutter package project.
+description: Shared utilities for personal Flutter projects
 version: 0.0.1
-homepage:
+homepage: https://github.com/Elijah-Ashitey/flutter-util/tree/main
+publish_to: 'https://github.com/Elijah-Ashitey/flutter-util.git'
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.3.2 <4.0.0'
+  # flutter: ">=1.17.0"
 
 dependencies:
+  bloc: ^8.1.4
+  cached_network_image: ^3.3.1
+  equatable: ^2.0.5
+  feather_icons: ^1.2.0
   filesize: ^2.0.1
   flutter:
     sdk: flutter
-  intl: ^0.18.0
+  flutter_multi_formatter: ^2.12.8
+  flutter_staggered_animations: ^1.1.1
+  flutter_svg: ^2.0.10+1
+  flutter_tabler_icons: ^1.26.0
+  fluttericon: ^2.0.0
+  google_fonts: ^6.2.1
+  intl: ^0.19.0
+  logger: ^2.2.0
+  lottie: ^3.1.0
   mime: ^1.0.4
+  modal_bottom_sheet: ^3.0.0
+  simple_animations: ^5.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
