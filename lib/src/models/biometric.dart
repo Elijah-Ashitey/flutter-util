@@ -17,15 +17,20 @@ class BiometricAvailabilty {
     this.availableBiometrics = const [],
   });
 
-  BiometricAvailabilty copyWith({
-    String? message,
-    bool? canAuthenticate,
-    List<BiometricType>? availableBiometrics,
-  }) {
-    return BiometricAvailabilty(
-      message: message ?? this.message,
-      canAuthenticate: canAuthenticate ?? this.canAuthenticate,
-      availableBiometrics: availableBiometrics ?? this.availableBiometrics,
-    );
-  }
+  factory BiometricAvailabilty.fromJson(json) =>
+      _$BiometricAvailabiltyFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BiometricAvailabiltyToJson(this);
+
+  // BiometricAvailabilty copyWith({
+  //   String? message,
+  //   bool? canAuthenticate,
+  //   List<BiometricType>? availableBiometrics,
+  // }) {
+  //   return BiometricAvailabilty(
+  //     message: message ?? this.message,
+  //     canAuthenticate: canAuthenticate ?? this.canAuthenticate,
+  //     availableBiometrics: availableBiometrics ?? this.availableBiometrics,
+  //   );
+  // }
 }
