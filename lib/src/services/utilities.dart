@@ -40,7 +40,7 @@ class Utilities {
     return '0$number';
   }
 
-  static String formatAmounts(String amt) {
+  static String formatAmounts(String? amt) {
     String formattedAmt;
     final NumberFormat formatter = NumberFormat('#,##0.00', 'en_US');
     // final formatter = new NumberFormat.simpleCurrency();
