@@ -9,25 +9,29 @@ environment:
   # flutter: ">=1.17.0"
 
 dependencies:
-  bloc: ^8.1.4
-  cached_network_image: ^3.3.1
-  equatable: ^2.0.5
-  feather_icons: ^1.2.0
-  filesize: ^2.0.1
   flutter:
     sdk: flutter
-  flutter_multi_formatter: ^2.12.8
+
+
   flutter_staggered_animations: ^1.1.1
-  flutter_svg: ^2.0.10+1
+  flutter_multi_formatter: ^2.12.8
   flutter_tabler_icons: ^1.26.0
-  fluttericon: ^2.0.0
+  cached_network_image: ^3.3.1
+  modal_bottom_sheet: ^3.0.0
+  simple_animations: ^5.0.2
+  flutter_svg: ^2.0.10+1
+  feather_icons: ^1.2.0
   google_fonts: ^6.2.1
-  intl: 
+  fluttericon: ^2.0.0
+  local_auth: ^2.2.0
+  equatable: ^2.0.5
+  filesize: ^2.0.1
   logger: ^2.2.0
   lottie: ^3.1.0
   mime: ^1.0.4
-  modal_bottom_sheet: ^3.0.0
-  simple_animations: ^5.0.2
+  bloc: ^8.1.4
+  intl: 
+
 
 dev_dependencies:
   flutter_test:

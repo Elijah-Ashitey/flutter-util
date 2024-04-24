@@ -29,3 +29,5 @@ export 'src/widgets/dismiss.keyboard.dart';
 export 'src/widgets/empty.content.placeholder.dart';
 export 'src/widgets/glassmorphism.dart';
 export 'src/widgets/loading.indicator.dart';
+export 'src/services/utilities.dart';
+export 'src/services/local_auth.dart';
