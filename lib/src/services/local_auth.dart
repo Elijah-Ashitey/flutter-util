@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
+import 'package:sharedkits/shared_utils.dart';
 
 import '../models/biometric.dart';
 
@@ -12,14 +13,14 @@ class LocalAuth {
     List<BiometricType> availableBiometrics =
         await auth.getAvailableBiometrics();
     BiometricAvailabilty result = BiometricAvailabilty(
-      message: "No biometry capabilities",
+      message: "Initial Biometeri",
       availableBiometrics: availableBiometrics,
       canAuthenticate: canAuthenticate,
     );
 
     //-----> check if the device has biometric and has also been setup
     if (isAvailable && canAuthenticate) {
-      result.copyWith(
+      result = result.copyWith(
         canAuthenticate: true,
         message: "Ready to authenticate.",
       );
@@ -28,7 +29,7 @@ class LocalAuth {
     //-----> check if the device has biometric and can  be used but not set up yet
 
     if (isAvailable && !canAuthenticate) {
-      result.copyWith(
+      result = result.copyWith(
         message:
             "This device supports biometry but cannot be used due to an error.",
         canAuthenticate: false,
@@ -37,11 +38,12 @@ class LocalAuth {
 
     //------>  The device does not have any biometric capabilities
     if (!isAvailable && canAuthenticate) {
-      result.copyWith(
+      result = result.copyWith(
         message: "This device does not support biometry.",
         canAuthenticate: false,
       );
     }
+    logger.wtf(result.toJson());
 
     return result;
   }
