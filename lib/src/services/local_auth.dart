@@ -19,13 +19,18 @@ class LocalAuth {
     );
 
     //-----> check if the device has biometric and has also been setup
-    if (isAvailable && canAuthenticate) {
+    if (isAvailable && canAuthenticate && availableBiometrics.isNotEmpty) {
       result = result.copyWith(
         canAuthenticate: true,
         message: "Ready to authenticate.",
       );
     }
-
+    if (isAvailable && canAuthenticate && availableBiometrics.isEmpty) {
+      result = result.copyWith(
+        canAuthenticate: false,
+        message: "No Biometric device availbale.",
+      );
+    }
     //-----> check if the device has biometric and can  be used but not set up yet
 
     if (isAvailable && !canAuthenticate) {
@@ -39,7 +44,7 @@ class LocalAuth {
     //------>  The device does not have any biometric capabilities
     if (!isAvailable && canAuthenticate) {
       result = result.copyWith(
-        message: "This device does not support biometry.",
+        message: "This device does not support biometric.",
         canAuthenticate: false,
       );
     }
