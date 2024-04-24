@@ -61,8 +61,10 @@ class LocalAuth {
 
       return didAuthenticate;
       // ···
-    } on PlatformException {
+    } on PlatformException catch (e) {
       // ...
+
+      logger.e(e);
       return false;
     }
   }
