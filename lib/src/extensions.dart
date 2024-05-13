@@ -659,6 +659,9 @@ extension ContextX on BuildContext {
 
   MediaQueryData get mediaQuery => MediaQuery.of(this);
 
+  bool get isDarkMode =>
+      MediaQuery.of(this).platformBrightness == Brightness.dark;
+
   Brightness get invertedThemeBrightness =>
       theme.brightness == Brightness.light ? Brightness.dark : Brightness.light;
 
@@ -706,19 +709,17 @@ extension ContextX on BuildContext {
                             ).right(actions.isEmpty ? 0 : 12),
                           ),
                         },
-                        ...actions
-                            .map(
-                              (e) => AppRoundedButton(
-                                      layoutSize: LayoutSize.wrapContent,
-                                      onTap: () {
-                                        Navigator.pop(this);
-                                        if (e.onTap != null) e.onTap!();
-                                      },
-                                      text: e.label)
-                                  .horizontal(8)
-                                  .centered(),
-                            )
-                            .toList(),
+                        ...actions.map(
+                          (e) => AppRoundedButton(
+                                  layoutSize: LayoutSize.wrapContent,
+                                  onTap: () {
+                                    Navigator.pop(this);
+                                    if (e.onTap != null) e.onTap!();
+                                  },
+                                  text: e.label)
+                              .horizontal(8)
+                              .centered(),
+                        ),
                       ],
                     ).centered().top(16),
                   ],
