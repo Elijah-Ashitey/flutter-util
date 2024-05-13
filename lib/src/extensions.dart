@@ -659,8 +659,7 @@ extension ContextX on BuildContext {
 
   MediaQueryData get mediaQuery => MediaQuery.of(this);
 
-  bool get isDarkMode =>
-      MediaQuery.of(this).platformBrightness == Brightness.dark;
+  bool get isDarkMode => Theme.of(this).brightness == Brightness.dark;
 
   Brightness get invertedThemeBrightness =>
       theme.brightness == Brightness.light ? Brightness.dark : Brightness.light;
