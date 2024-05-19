@@ -10,29 +10,29 @@ import 'constants.dart';
 ThemeData kLightTheme({required BuildContext context}) =>
     ThemeData.light(useMaterial3: true).copyWith(
       textTheme: kPrimaryFonts.copyWith(
-        headline3: kPrimaryTextStyle.copyWith(
+        displaySmall: kPrimaryTextStyle.copyWith(
             color: Colors.black, fontWeight: FontWeight.bold),
-        headline4: kPrimaryTextStyle.copyWith(color: Colors.black),
-        headline5: kPrimaryTextStyle.copyWith(
+        headlineMedium: kPrimaryTextStyle.copyWith(color: Colors.black),
+        headlineSmall: kPrimaryTextStyle.copyWith(
           color: Colors.black,
           fontWeight: FontWeight.w600,
         ),
-        headline6: kPrimaryTextStyle.copyWith(
+        titleLarge: kPrimaryTextStyle.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.w600,
             letterSpacing: 1.7),
-        subtitle1: kPrimaryTextStyle.copyWith(color: Colors.black),
-        subtitle2: kPrimaryTextStyle.copyWith(color: Colors.black54),
-        bodyText1: kPrimaryTextStyle.copyWith(color: Colors.black),
-        bodyText2: kPrimaryTextStyle.copyWith(
+        titleMedium: kPrimaryTextStyle.copyWith(color: Colors.black),
+        titleSmall: kPrimaryTextStyle.copyWith(color: Colors.black54),
+        bodyLarge: kPrimaryTextStyle.copyWith(color: Colors.black),
+        bodyMedium: kPrimaryTextStyle.copyWith(
             color: Colors.black54, fontWeight: FontWeight.bold),
-        caption: kPrimaryTextStyle.copyWith(
+        bodySmall: kPrimaryTextStyle.copyWith(
             color: Colors.black, fontWeight: FontWeight.bold),
-        overline: kPrimaryTextStyle.copyWith(color: Colors.black),
-        button: kPrimaryTextStyle.copyWith(
+        labelSmall: kPrimaryTextStyle.copyWith(color: Colors.black),
+        labelLarge: kPrimaryTextStyle.copyWith(
             color: Colors.white, fontWeight: FontWeight.bold),
       ),
-      colorScheme: ColorScheme.light(
+      colorScheme: const ColorScheme.light(
         background: kLightBackgroundColor,
         surface: kLightSurfaceColor,
         primary: kBlackColor,
@@ -52,7 +52,6 @@ ThemeData kLightTheme({required BuildContext context}) =>
 ThemeData kDarkTheme({required BuildContext context}) =>
     ThemeData.dark(useMaterial3: true).copyWith(
       scaffoldBackgroundColor: const Color(0xff1A1A1A),
-      backgroundColor: const Color(0xff1A1A1A),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: Color(0xff1A1A1A),
         enableFeedback: true,
@@ -73,26 +72,48 @@ ThemeData kDarkTheme({required BuildContext context}) =>
         toolbarHeight: kToolbarHeight * 1.3,
       ),
       textTheme: kPrimaryFonts.copyWith(
-        headline3: kPrimaryTextStyle.copyWith(
+        // headline3: kPrimaryTextStyle.copyWith(
+        //           color: Colors.white, fontWeight: FontWeight.bold),
+        //       headline4: kPrimaryTextStyle.copyWith(color: Colors.white),
+        //       headline5: kPrimaryTextStyle.copyWith(
+        //         color: Colors.white,
+        //         fontWeight: FontWeight.w600,
+        //       ),
+        //       headline6: kPrimaryTextStyle.copyWith(
+        //           color: Colors.white,
+        //           fontWeight: FontWeight.w600,
+        //           letterSpacing: 1.7),
+        //       subtitle1: kPrimaryTextStyle.copyWith(color: Colors.white),
+        //       subtitle2: kPrimaryTextStyle.copyWith(color: Colors.white70),
+        //       bodyText1: kPrimaryTextStyle.copyWith(color: Colors.white),
+        //       bodyText2: kPrimaryTextStyle.copyWith(
+        //           color: Colors.white60, fontWeight: FontWeight.bold),
+        //       caption: kPrimaryTextStyle.copyWith(
+        //           color: Colors.white, fontWeight: FontWeight.bold),
+        //       overline: kPrimaryTextStyle.copyWith(color: Colors.white),
+        //       button: kPrimaryTextStyle.copyWith(
+        //           color: const Color(0xff14121e), fontWeight: FontWeight.bold),
+
+        displaySmall: kPrimaryTextStyle.copyWith(
             color: Colors.white, fontWeight: FontWeight.bold),
-        headline4: kPrimaryTextStyle.copyWith(color: Colors.white),
-        headline5: kPrimaryTextStyle.copyWith(
+        headlineMedium: kPrimaryTextStyle.copyWith(color: Colors.white),
+        headlineSmall: kPrimaryTextStyle.copyWith(
           color: Colors.white,
           fontWeight: FontWeight.w600,
         ),
-        headline6: kPrimaryTextStyle.copyWith(
+        titleLarge: kPrimaryTextStyle.copyWith(
             color: Colors.white,
             fontWeight: FontWeight.w600,
             letterSpacing: 1.7),
-        subtitle1: kPrimaryTextStyle.copyWith(color: Colors.white),
-        subtitle2: kPrimaryTextStyle.copyWith(color: Colors.white70),
-        bodyText1: kPrimaryTextStyle.copyWith(color: Colors.white),
-        bodyText2: kPrimaryTextStyle.copyWith(
+        titleMedium: kPrimaryTextStyle.copyWith(color: Colors.white),
+        titleSmall: kPrimaryTextStyle.copyWith(color: Colors.white70),
+        bodyLarge: kPrimaryTextStyle.copyWith(color: Colors.white),
+        bodyMedium: kPrimaryTextStyle.copyWith(
             color: Colors.white60, fontWeight: FontWeight.bold),
-        caption: kPrimaryTextStyle.copyWith(
+        bodySmall: kPrimaryTextStyle.copyWith(
             color: Colors.white, fontWeight: FontWeight.bold),
-        overline: kPrimaryTextStyle.copyWith(color: Colors.white),
-        button: kPrimaryTextStyle.copyWith(
+        labelSmall: kPrimaryTextStyle.copyWith(color: Colors.white),
+        labelLarge: kPrimaryTextStyle.copyWith(
             color: const Color(0xff14121e), fontWeight: FontWeight.bold),
       ),
       colorScheme: const ColorScheme.dark(
@@ -117,5 +138,5 @@ ThemeData kDarkTheme({required BuildContext context}) =>
         onErrorContainer: Colors.white,
         error: Colors.pink,
         onError: Colors.white,
-      ),
+      ).copyWith(background: const Color(0xff1A1A1A)),
     );
