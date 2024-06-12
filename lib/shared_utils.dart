@@ -21,6 +21,7 @@ export 'src/responsive.layout.dart';
 export 'src/spacing.dart';
 export 'src/themes.dart';
 export 'src/widgets/animated.column.dart';
+export 'src/widgets/bottom.sheet.dart';
 export 'src/widgets/animated.list.dart';
 export 'src/widgets/animated.row.dart';
 export 'src/widgets/app.rounded.button.dart';
