@@ -3,7 +3,8 @@ library shared_utils;
 import 'package:flutter/material.dart';
 import 'package:wtf_sliding_sheet/wtf_sliding_sheet.dart';
 
-void showCustomBottomSheet(BuildContext context, Widget child) {
+void showCustomBottomSheet(BuildContext context, Widget child,
+    [bool onlyWidget = false]) {
   final SheetController sheetController = SheetController();
 
   showSlidingBottomSheet<void>(
@@ -18,11 +19,13 @@ void showCustomBottomSheet(BuildContext context, Widget child) {
           snappings: <double>[1, 1, 1.0],
         ),
         builder: (BuildContext context, SheetState state) {
-          return Material(
-            child: SingleChildScrollView(
-              child: child,
-            ),
-          );
+          return onlyWidget
+              ? child
+              : Material(
+                  child: SingleChildScrollView(
+                    child: child,
+                  ),
+                );
         },
       );
     },
