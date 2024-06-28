@@ -7,6 +7,12 @@ import '../models/biometric.dart';
 class LocalAuth {
   final LocalAuthentication auth = LocalAuthentication();
 
+  Future<bool> hasFaceId() async {
+    List<BiometricType> availableBiometrics =
+        await auth.getAvailableBiometrics();
+    return availableBiometrics.contains(BiometricType.face);
+  }
+
   Future<BiometricAvailabilty> canCheckBiometrics() async {
     bool canAuthenticate = await auth.canCheckBiometrics;
     bool isAvailable = await auth.isDeviceSupported();
@@ -48,7 +54,6 @@ class LocalAuth {
         canAuthenticate: false,
       );
     }
-    logger.wtf(result.toJson());
 
     return result;
   }
