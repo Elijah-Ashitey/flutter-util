@@ -1,4 +1,4 @@
 library shared_utils;
 
-final kSidebarDuration = const Duration(milliseconds: 350);
-final kSidebarFooterDuration = const Duration(milliseconds: 550);
+const kSidebarDuration = Duration(milliseconds: 350);
+const kSidebarFooterDuration = Duration(milliseconds: 550);

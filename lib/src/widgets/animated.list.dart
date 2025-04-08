@@ -12,14 +12,14 @@ class AnimatedListView extends StatelessWidget {
   final ScrollPhysics? physics;
 
   const AnimatedListView({
-    Key? key,
+    super.key,
     required this.children,
     this.animateType = AnimateType.slideLeft,
     this.padding = EdgeInsets.zero,
     this.duration = 500,
     this.slideOffset = 50.0,
     this.physics,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) =>

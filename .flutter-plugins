@@ -1,4 +1,11 @@
 # This is a generated file; do not edit or check into version control.
+firebase_core=/Users/elijahashitey/.pub-cache/hosted/pub.dev/firebase_core-3.13.0/
+firebase_core_web=/Users/elijahashitey/.pub-cache/hosted/pub.dev/firebase_core_web-2.22.0/
+firebase_messaging=/Users/elijahashitey/.pub-cache/hosted/pub.dev/firebase_messaging-15.2.5/
+firebase_messaging_web=/Users/elijahashitey/.pub-cache/hosted/pub.dev/firebase_messaging_web-3.10.5/
+flutter_local_notifications=/Users/elijahashitey/.pub-cache/hosted/pub.dev/flutter_local_notifications-19.0.0/
+flutter_local_notifications_linux=/Users/elijahashitey/.pub-cache/hosted/pub.dev/flutter_local_notifications_linux-6.0.0/
+flutter_local_notifications_windows=/Users/elijahashitey/.pub-cache/hosted/pub.dev/flutter_local_notifications_windows-1.0.0/
 flutter_plugin_android_lifecycle=/Users/elijahashitey/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.19/
 local_auth=/Users/elijahashitey/.pub-cache/hosted/pub.dev/local_auth-2.2.0/
 local_auth_android=/Users/elijahashitey/.pub-cache/hosted/pub.dev/local_auth_android-1.0.38/

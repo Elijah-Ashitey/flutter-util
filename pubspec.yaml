@@ -34,6 +34,8 @@ dependencies:
   mime: ^1.0.4
   bloc: ^8.1.4
   intl: 
+  firebase_messaging: ^15.2.5
+  flutter_local_notifications: ^19.0.0
 
 
 dev_dependencies:
