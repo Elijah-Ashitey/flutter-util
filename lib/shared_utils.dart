@@ -32,4 +32,6 @@ export 'src/widgets/glassmorphism.dart';
 export 'src/widgets/loading.indicator.dart';
 export 'src/services/utilities.dart';
 export 'src/services/local_auth.dart';
+export 'src/services/firebase_messaging_service.dart';
+export 'src/services/notification_service.dart';
 export 'src/models/biometric.dart';
