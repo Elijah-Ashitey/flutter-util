@@ -2,11 +2,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class FirebaseMessagingService {
-  factory FirebaseMessagingService() => _instance;
-  static final FirebaseMessagingService _instance =
-      FirebaseMessagingService._internal();
-  FirebaseMessagingService._internal();
-
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
   final FlutterLocalNotificationsPlugin _localNotifications =
       FlutterLocalNotificationsPlugin();

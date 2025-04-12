@@ -11,6 +11,13 @@ class LocalAuth {
     return availableBiometrics.contains(BiometricType.face);
   }
 
+  Future<bool> isValidated() async {
+    List<BiometricType> availableBiometrics =
+        await auth.getAvailableBiometrics();
+    print("availableBiometrics: $availableBiometrics");
+    return availableBiometrics.contains(BiometricType.face);
+  }
+
   Future<BiometricAvailabilty> canCheckBiometrics() async {
     bool canAuthenticate = await auth.canCheckBiometrics;
     bool isAvailable = await auth.isDeviceSupported();
